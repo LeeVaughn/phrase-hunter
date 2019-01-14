@@ -29,7 +29,8 @@ class Game {
    */
   getRandomPhrase() {
     const index = Math.floor(Math.random() * this.phrases.length);
-    
-    return this.phrases[index];
-  };
+    const phrase = this.phrases[index];
+
+    return phrase;
+  }
 }
