@@ -19,4 +19,20 @@ class Phrase {
       }
     }
   }
+
+  /**
+   * checks if passed letter is in phrase
+   * @param (string) letter - letter to check
+   */
+  checkLetter(letter) {
+
+  }
+
+  /**
+   * displays passed letter on screen after a match is found
+   * @param (string) letter - letter to display
+   */
+  showMatchedLetter(letter) {
+
+  }
 }

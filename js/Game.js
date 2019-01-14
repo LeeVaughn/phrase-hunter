@@ -39,4 +39,25 @@ class Game {
 
     $("#overlay").hide();
   }
+
+  /**
+    * checks for winning move
+    * @return {boolean} true if game has been won, false if game hasn't been won
+    */
+  checkForWin() {
+
+  }
+
+  // increases the value of the missed property, removes a life, checks if player has remaining lives and ends game if not
+  removeLife() {
+
+  }
+
+  /**
+   * displays game over message
+   * @param {boolean} gameWon - whether or not the user won the game
+   */
+  gameOver(gameWon) {
+
+  }
 }
