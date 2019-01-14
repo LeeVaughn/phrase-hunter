@@ -33,4 +33,13 @@ class Game {
 
     return phrase;
   }
+
+
+  // selects random phrase, stores it in activePhrase, displays it to user, and hides start overlay
+  startGame() {
+    this.activePhrase = new Phrase(game.getRandomPhrase());
+    this.activePhrase.addPhraseToDisplay();
+    
+    $("#overlay").hide();
+  }
 }

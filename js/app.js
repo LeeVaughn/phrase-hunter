@@ -18,7 +18,12 @@
 // const game = new Game();
 // game.getRandomPhrase().addPhraseToDisplay();
 
-// tests that did work for addPhraseToDisplay
+// // tests that did work for addPhraseToDisplay
+// const game = new Game();
+// const phrase = new Phrase(game.getRandomPhrase());
+// phrase.addPhraseToDisplay();
+
+// tests startGame
 const game = new Game();
-const phrase = new Phrase(game.getRandomPhrase());
-phrase.addPhraseToDisplay();
+game.startGame();
+console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
