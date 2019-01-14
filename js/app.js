@@ -14,9 +14,11 @@
 //   logPhrase(game.getRandomPhrase());
 //   console.log(game.getRandomPhrase());
 
-// tests addPhraseToDisplay
+// // recommended test for addPhraseToDisplay (does not work)
+// const game = new Game();
+// game.getRandomPhrase().addPhraseToDisplay();
+
+// tests that did work for addPhraseToDisplay
 const game = new Game();
-// game.getRandomPhrase();
 const phrase = new Phrase(game.getRandomPhrase());
-console.log(phrase);
 phrase.addPhraseToDisplay();
