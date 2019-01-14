@@ -16,4 +16,7 @@
 
 // tests addPhraseToDisplay
 const game = new Game();
-game.getRandomPhrase().addPhraseToDisplay();
+// game.getRandomPhrase();
+const phrase = new Phrase(game.getRandomPhrase());
+console.log(phrase);
+phrase.addPhraseToDisplay();
