@@ -1,18 +1,13 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * app.js */
+let game;
 
- // test getRandomPhrase
-//  const logPhrase = (phrase) => {
-//   console.log(`Phrase - phrase: `, phrase.phrase);
-//   };
-//   const game = new Game();
-//   logPhrase(game.getRandomPhrase());
-//   logPhrase(game.getRandomPhrase());
-//   logPhrase(game.getRandomPhrase());
-//   logPhrase(game.getRandomPhrase());
-//   logPhrase(game.getRandomPhrase());
-//   console.log(game.getRandomPhrase());
+// listens for clicks on Start Game button, instantiates a new Game object and calls startGame on it
+$("#btn__reset").click(function() {
+  game = new Game();
+
+  game.startGame();
+});
+
+
 
 // // recommended test for addPhraseToDisplay (does not work)
 // const game = new Game();
@@ -23,7 +18,3 @@
 // const phrase = new Phrase(game.getRandomPhrase());
 // phrase.addPhraseToDisplay();
 
-// tests startGame
-const game = new Game();
-game.startGame();
-console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
