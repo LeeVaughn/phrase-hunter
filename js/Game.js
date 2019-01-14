@@ -22,4 +22,14 @@ class Game {
 
     return phrases;
   }
+
+  /**
+   * selects a random phrase from phrases property
+   * @return {object} randomly selected phrase object
+   */
+  getRandomPhrase() {
+    const index = Math.floor(Math.random() * this.phrases.length);
+    
+    return this.phrases[index];
+  };
 }
