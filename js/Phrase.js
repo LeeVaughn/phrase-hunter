@@ -1,6 +1,3 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * Phrase.js */
 class Phrase {
   constructor(phrase) {
     this.phrase = phrase.phrase.toLowerCase();
@@ -11,6 +8,7 @@ class Phrase {
     const phrase = this.phrase;
     console.log(phrase);
 
+    // loops over phrase to create and append li elements for letters and spaces
     for (let i = 0; i < phrase.length; i++) {
       if (phrase[i] === " ") {
         let $li = $(`<li class="space"> </li>`);

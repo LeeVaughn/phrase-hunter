@@ -1,16 +1,14 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * Game.js */
 class Game {
   constructor() {
     this.missed = 0;
     this.phrases = this.createPhrases();
     this.activePhrase = null;
   }
-/**
- * creates phrases for use in game
- * @return {array} an array of phrases to be used in the game
- */
+
+  /**
+    * creates phrases for use in game
+    * @return {array} an array of phrases to be used in the game
+    */
   createPhrases() {
     const phrases = [
       {phrase: "May the Force be with you"},
@@ -34,12 +32,11 @@ class Game {
     return phrase;
   }
 
-
   // selects random phrase, stores it in activePhrase, displays it to user, and hides start overlay
   startGame() {
     this.activePhrase = new Phrase(game.getRandomPhrase());
     this.activePhrase.addPhraseToDisplay();
-    
+
     $("#overlay").hide();
   }
 }
