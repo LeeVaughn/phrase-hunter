@@ -13,11 +13,11 @@ class Game {
  */
   createPhrases() {
     const phrases = [
-      {phrase: "may the force be with you"},
-      {phrase: "show me the money"},
-      {phrase: "i see dead people"},
-      {phrase: "my precious"},
-      {phrase: "do or do not"}
+      {phrase: "May the Force be with you"},
+      {phrase: "Show me the money"},
+      {phrase: "I see dead people"},
+      {phrase: "My precious"},
+      {phrase: "Do or do not"}
     ]
 
     return phrases;
