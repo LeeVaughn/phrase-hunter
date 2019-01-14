@@ -3,12 +3,12 @@
  * Phrase.js */
 class Phrase {
   constructor(phrase) {
-    this.phrase = phrase;
+    this.phrase = phrase.phrase.toLowerCase();
   }
 
   // displays phrase on game board
   addPhraseToDisplay() {
-    const phrase = this.phrase.phrase;
+    const phrase = this.phrase;
     console.log(phrase);
 
     for (let i = 0; i < phrase.length; i++) {
