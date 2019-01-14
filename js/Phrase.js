@@ -13,13 +13,12 @@ class Phrase {
 
     for (let i = 0; i < phrase.length; i++) {
       if (phrase[i] === " ") {
-        const $li = $(`<li class="space"> </li>`);
+        let $li = $(`<li class="space"> </li>`);
         $("#phrase ul").append($li);
       } else {
-        const $li = $(`<li class="hide letter ${phrase[i]}">${phrase[i]}</li>`);
+        let $li = $(`<li class="hide letter ${phrase[i]}">${phrase[i]}</li>`);
         $("#phrase ul").append($li);
       }
-      // $("#phrase ul").append($li);
     }
   }
 }
