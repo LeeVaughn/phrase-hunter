@@ -25,7 +25,25 @@ class Phrase {
    * @param (string) letter - letter to check
    */
   checkLetter(letter) {
+    console.log("checking");
+    console.log(letter);
+    const phrase = this.phrase;
 
+    for (let i = 0; i < phrase.length; i++) {
+      if (phrase[i] === letter) {
+        console.log("match");
+
+        $($(`.${letter}`).removeClass("hide").addClass("show"));
+        // const char = letter;
+        // const match = document.querySelectorAll(`.${char}`);
+        // console.log(match);
+
+        // document.querySelectorAll(`.${char}`).classList.remove("hide");
+        // match.classList.remove("hide");
+      } else {
+        console.log("no match");
+      }
+    }
   }
 
   /**
