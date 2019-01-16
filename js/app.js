@@ -10,8 +10,7 @@ $("#btn__reset").click(() => {
 // listens for clicks on the displayed phrase and calls checkLetter passing clicked letter as a parameter
 $("#phrase").on("click", "li", (e) => {
   const letter = e.target.innerText;
-
-  game.activePhrase.checkLetter(letter);
+  console.log(e);
 });
 
 
