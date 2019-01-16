@@ -40,6 +40,10 @@ class Game {
     $("#overlay").hide();
   }
 
+  handleInteraction() {
+    
+  }
+
   /**
     * checks for winning move
     * @return {boolean} true if game has been won, false if game hasn't been won
