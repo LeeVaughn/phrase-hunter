@@ -23,6 +23,8 @@ class Phrase {
   /**
    * checks if passed letter is in phrase
    * @param (string) letter - letter to check
+   * @return {boolean} true if phrase includes letter, false if it doesn't
+won
    */
   checkLetter(letter) {
     if (this.phrase.includes(letter)) {
