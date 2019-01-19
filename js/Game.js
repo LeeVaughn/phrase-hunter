@@ -64,7 +64,6 @@ class Game {
     $(".tries img").eq(index).attr("src", "images/lostHeart.png");
 
     if (this.missed === 5) {
-      console.log("game over!");
       game.gameOver(false);
     }
   }
@@ -75,10 +74,16 @@ class Game {
    */
   gameOver(gameWon) {
     if (gameWon) {
-      console.log("you won!");
+      // update elements to show winning message
+      $("#overlay h1").text("Congratulations! You win!");
+      $(".start").attr("class", "win");
+      $("#btn__reset").text("Play Again");
       $("#overlay").show();
     } else {
-      console.log("you lost!");
+      // undate elements to show losing message
+      $("#overlay h1").text("You are out of guesses. Better luck next time!");
+      $(".start").attr("class", "lose");
+      $("#btn__reset").text("Play Again");
       $("#overlay").show();
     }
   }
