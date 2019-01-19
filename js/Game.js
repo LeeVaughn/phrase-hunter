@@ -58,7 +58,15 @@ class Game {
 
   // increases the value of the missed property, removes a life, checks if player has remaining lives and ends game if not
   removeLife() {
+    const index = 4 - this.missed;
+    this.missed += 1;
 
+    $(".tries img").eq(index).attr("src", "images/lostHeart.png");
+
+    if (this.missed === 5) {
+      console.log("game over!");
+      game.gameOver(false);
+    }
   }
 
   /**
@@ -66,6 +74,12 @@ class Game {
    * @param {boolean} gameWon - whether or not the user won the game
    */
   gameOver(gameWon) {
-
+    if (gameWon) {
+      console.log("you won!");
+      $("#overlay").show();
+    } else {
+      console.log("you lost!");
+      $("#overlay").show();
+    }
   }
 }
