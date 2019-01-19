@@ -49,7 +49,11 @@ class Game {
     * @return {boolean} true if game has been won, false if game hasn't been won
     */
   checkForWin() {
-
+    if ($(".hide").length === 0) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   // increases the value of the missed property, removes a life, checks if player has remaining lives and ends game if not
