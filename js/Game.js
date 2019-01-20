@@ -40,8 +40,14 @@ class Game {
     $("#overlay").hide();
   }
 
-  handleInteraction() {
-    
+  handleInteraction(letter, button) {
+    $(button).prop("disabled", true);
+
+    if (game.activePhrase.checkLetter(letter)) {
+      console.log("true");
+    } else {
+      console.log("false");
+    }
   }
 
   /**
