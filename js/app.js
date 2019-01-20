@@ -10,11 +10,11 @@ $("#btn__reset").click(() => {
 // listens for clicks on the onscreen keyboard
 $("#qwerty").on("click", "button", (e) => {
   const button = e.target;
-  const letter = e.target.innerText;
+  
   console.log(e);
   console.log(button);
 
-  game.handleInteraction(letter, button);
+  game.handleInteraction(button);
 });
 
 
