@@ -7,10 +7,14 @@ $("#btn__reset").click(() => {
   game.startGame();
 });
 
-// listens for clicks on the displayed phrase
-$("#phrase").on("click", "li", (e) => {
+// listens for clicks on the onscreen keyboard
+$("#qwerty").on("click", "button", (e) => {
+  const button = e.target;
   const letter = e.target.innerText;
   console.log(e);
+  console.log(button);
+
+  game.handleInteraction(letter, button);
 });
 
 

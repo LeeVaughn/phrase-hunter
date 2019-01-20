@@ -40,7 +40,14 @@ class Game {
     $("#overlay").hide();
   }
 
-  handleInteraction(letter, button) {
+  /**
+   * handles onscreen keyboard button clicks
+   * @param (HTMLButtonElement) button - the clicked button element
+   */
+  handleInteraction(button) {
+    const letter = button.innerText;
+
+    // disables selected button
     $(button).prop("disabled", true);
 
     if (game.activePhrase.checkLetter(letter)) {
