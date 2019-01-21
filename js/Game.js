@@ -40,12 +40,11 @@ class Game {
   }
 
   /**
-   * handles onscreen keyboard button clicks
-   * @param (HTMLButtonElement) button - the clicked button element
+   * handles button clicks and keyup events
+   * @param (HTMLButtonElement) button - the button element for the selected letter
+   * @param (HTMLButtonElement) letter - the letter selected
    */
-  handleInteraction(button) {
-    const letter = button.innerText;
-
+  handleInteraction(button, letter) {
     // disables selected button
     $(button).prop("disabled", true);
 
