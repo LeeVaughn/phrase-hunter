@@ -108,4 +108,11 @@ class Game {
       $("#overlay").show();
     }
   }
+
+  // resets game elements to original settings
+  resetGame() {
+    $("#phrase li").remove();
+    $("button").prop("disabled", false).removeClass("wrong").removeClass("chosen");
+    $(".tries img").attr("src", "images/liveHeart.png");
+  }
 }
