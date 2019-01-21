@@ -17,7 +17,6 @@ class Game {
       {phrase: "My precious"},
       {phrase: "Do or do not"}
     ]
-
     return phrases;
   }
 
@@ -50,15 +49,17 @@ class Game {
     // disables selected button
     $(button).prop("disabled", true);
 
+    /**
+     * if clicked letter is in phrase: add chosen class, call matchedLetter, and if checkForWin is true call gameOver
+     * else add wrong class and call removeLife
+     */
     if (game.activePhrase.checkLetter(letter)) {
-      console.log("true");
       $(button).addClass("chosen");
       game.activePhrase.showMatchedLetter(letter);
       if (game.checkForWin()) {
         game.gameOver(true);
       }
     } else {
-      console.log("false");
       $(button).addClass("wrong");
       game.removeLife();
     }
@@ -100,7 +101,7 @@ class Game {
       $("#btn__reset").text("Play Again");
       $("#overlay").show();
     } else {
-      // undate elements to show losing message
+      // update elements to show losing message
       $("#overlay h1").text("You are out of guesses. Better luck next time!");
       $(".start").attr("class", "lose");
       $("#btn__reset").text("Play Again");
