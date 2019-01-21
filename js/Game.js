@@ -90,23 +90,22 @@ class Game {
   }
 
   /**
-   * displays game over message
+   * displays game over message and resets game board
    * @param {boolean} gameWon - whether or not the user won the game
    */
   gameOver(gameWon) {
     if (gameWon) {
       // update elements to show winning message
       $("#overlay h1").text("Congratulations! You win!");
-      $(".start").attr("class", "win");
-      $("#btn__reset").text("Play Again");
-      $("#overlay").show();
+      $("#overlay").attr("class", "win");
     } else {
       // update elements to show losing message
       $("#overlay h1").text("You are out of guesses. Better luck next time!");
-      $(".start").attr("class", "lose");
-      $("#btn__reset").text("Play Again");
-      $("#overlay").show();
+      $("#overlay").attr("class", "lose");
     }
+    $("#btn__reset").text("Play Again");
+    $("#overlay").show();
+    game.resetGame();
   }
 
   // resets game elements to original settings
