@@ -37,7 +37,6 @@ class Phrase {
    * @param (string) letter - letter to display
    */
   showMatchedLetter(letter) {
-    // is the extra $ and () needed?
-    $($(`.${letter}`).removeClass("hide").addClass("show"));
+    $(`.${letter}`).removeClass("hide").addClass("show");
   }
 }
