@@ -1,10 +1,9 @@
 let game;
 
-// listens for clicks on Start Game button, instantiates a new Game object then calls resetGame and startGame methods
+// listens for clicks on Start Game button, instantiates a new Game object, then calls startGame method
 $("#btn__reset").click(() => {
   game = new Game();
 
-  game.resetGame();
   game.startGame();
 });
 
