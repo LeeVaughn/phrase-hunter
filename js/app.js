@@ -1,18 +1,16 @@
 let game;
 
-// listens for clicks on Start Game button, instantiates a new Game object and calls startGame on it
+// listens for clicks on Start Game button, instantiates a new Game object then calls resetGame and startGame methods
 $("#btn__reset").click(() => {
   game = new Game();
 
+  game.resetGame();
   game.startGame();
 });
 
-// listens for clicks on the onscreen keyboard
+// listens for clicks on the onscreen keyboard and calls handleInteraction method
 $("#qwerty").on("click", "button", (e) => {
   const button = e.target;
-  
-  console.log(e);
-  console.log(button);
 
   game.handleInteraction(button);
 });
