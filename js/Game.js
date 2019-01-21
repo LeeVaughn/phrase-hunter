@@ -52,8 +52,15 @@ class Game {
 
     if (game.activePhrase.checkLetter(letter)) {
       console.log("true");
+      $(button).addClass("chosen");
+      game.activePhrase.showMatchedLetter(letter);
+      if (game.checkForWin()) {
+        game.gameOver(true);
+      }
     } else {
       console.log("false");
+      $(button).addClass("wrong");
+      game.removeLife();
     }
   }
 
@@ -69,7 +76,7 @@ class Game {
     }
   }
 
-  // increases the value of the missed property, removes a life, checks if player has remaining lives and ends game if not
+  // increases the value of the missed property, removes a life, checks if player has lives remaining and ends game if not
   removeLife() {
     const index = 4 - this.missed;
     this.missed += 1;
