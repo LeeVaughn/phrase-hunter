@@ -15,8 +15,11 @@ This is the fourth project in the Treehouse Full Stack JavaScript Techdegree pro
 * The player can select letters by clicking on the onscreen keyboard or by pressing keys on their physical keyboard.
 
 ## Future Improvements
-* Improve and expand upon the styling of the app.
-* Add animations to the application.
+* Improve and expand upon the styling
+* Add additional phrases
+* Consider adding a timer
+* Consider adding a clue option
+* Consider adding animations
 
 ## Links
 * Project homepage: https://leevaughn.github.io/phrase-hunter/
