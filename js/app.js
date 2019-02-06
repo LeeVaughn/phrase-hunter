@@ -8,28 +8,16 @@ $("#btn__reset").click(() => {
 });
 
 // listens for clicks on the onscreen keyboard and calls handleInteraction method
-$("#qwerty").on("click", "button", (e) => {
-  const button = e.target;
+$("#qwerty").on("click", "button", (event) => {
+  const button = event.target;
   const letter = button.innerText;
 
   game.handleInteraction(button, letter);
 });
 
-$(document).keyup((e) => {
-  const letter = e.key;
+$(document).keyup((event) => {
+  const letter = event.key;
   const button = $(`button:contains(${letter})`);
 
   game.handleInteraction(button, letter);
 });
-
-
-
-// // recommended test for addPhraseToDisplay (does not work)
-// const game = new Game();
-// game.getRandomPhrase().addPhraseToDisplay();
-
-// // tests that did work for addPhraseToDisplay
-// const game = new Game();
-// const phrase = new Phrase(game.getRandomPhrase());
-// phrase.addPhraseToDisplay();
-
