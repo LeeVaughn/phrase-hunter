@@ -37,6 +37,6 @@ class Phrase {
    * @param (string) letter - letter to display
    */
   showMatchedLetter(letter) {
-    $(`.${letter}`).removeClass("hide").addClass("show");
+    $(`.${letter}`).removeClass("hide").addClass("show flash");
   }
 }
