@@ -33,6 +33,7 @@ body {
 li, ol, ul {
   padding: 0;
   display: inline-block;
+  user-select: none;
 }
 
 h2 {
@@ -63,6 +64,10 @@ button {
 #btn__reset {
 	width: 200px;
 	margin: 0 auto;
+}
+
+#btn__reset:hover {
+	transform: scale(1.1);
 }
 
 .main-container {
@@ -130,6 +135,10 @@ button {
   justify-content: center;
 }
 
+.key:hover {
+  transform: scale(1.1);
+}
+
 .chosen {
   background: #3a3f58;
   border-radius: 5px;
@@ -180,7 +189,8 @@ button {
 }
 
 .start {
-  background-color: #3a3f58;
+  /* background-color: #3a3f58; */
+  background: url(../images/letters.jpeg) no-repeat center / cover;
 }
 
 .start a {
