@@ -15,7 +15,11 @@ class Game {
       {phrase: "Show me the money"},
       {phrase: "I see dead people"},
       {phrase: "My precious"},
-      {phrase: "Do or do not"}
+      {phrase: "Do or do not"},
+      {phrase: "All righty then"},
+      {phrase: "The dude abides"},
+      {phrase: "That escalated quickly"},
+      {phrase: "One million dollars"}
     ]
     return phrases;
   }
