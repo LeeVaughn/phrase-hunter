@@ -15,6 +15,7 @@ $("#qwerty").on("click", "button", (event) => {
   game.handleInteraction(button, letter);
 });
 
+// listens for keyboard events and calls handleInteraction method
 $(document).keyup((event) => {
   const letter = event.key;
   const button = $(`button:contains(${letter})`);
