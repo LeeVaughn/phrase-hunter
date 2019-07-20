@@ -49,22 +49,25 @@ class Game {
    * @param (HTMLButtonElement) letter - the letter selected
    */
   handleInteraction(button, letter) {
-    // disables selected button
-    $(button).prop("disabled", true);
+    // makes sure button is not already disabled
+    if ($(button).prop("disabled") === false) {
+      // disables selected button
+      $(button).prop("disabled", true);
 
-    /**
-     * if clicked letter is in phrase: add chosen class, call matchedLetter, and if checkForWin is true call gameOver
-     * else add wrong class and call removeLife
-     */
-    if (game.activePhrase.checkLetter(letter)) {
-      $(button).addClass("chosen");
-      game.activePhrase.showMatchedLetter(letter);
-      if (game.checkForWin()) {
-        game.gameOver(true);
+      /**
+       * if clicked letter is in phrase: add chosen class, call matchedLetter, and if checkForWin is true call gameOver
+       * else add wrong class and call removeLife
+       */
+      if (game.activePhrase.checkLetter(letter)) {
+        $(button).addClass("chosen");
+        game.activePhrase.showMatchedLetter(letter);
+        if (game.checkForWin()) {
+          game.gameOver(true);
+        }
+      } else {
+        $(button).addClass("wrong");
+        game.removeLife();
       }
-    } else {
-      $(button).addClass("wrong");
-      game.removeLife();
     }
   }
 
