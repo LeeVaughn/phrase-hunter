@@ -187,6 +187,10 @@ button {
   background: url(../images/letters.jpeg) no-repeat center / cover;
 }
 
+body {
+  background: url(../images/keyboard.jpg) no-repeat center / cover;
+}
+
 .start a {
   color: #fff;
 }
