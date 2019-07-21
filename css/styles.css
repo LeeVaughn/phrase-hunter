@@ -24,6 +24,7 @@
 }
 
 body {
+  background: url(../images/keyboard.jpg) no-repeat center / cover;
   justify-content: space-evenly;
   flex-direction: column;
   display: flex;
@@ -91,7 +92,10 @@ button {
 /* Title */
 
 .header {
-  color: #3a3f58;
+  color: white;
+	font-size: 47px;
+	-webkit-text-stroke: 1px #F8F8F8;
+	text-shadow: 0px 3px 6px #1e90ff;
 }
 
 /* Phrase */
@@ -105,6 +109,7 @@ button {
   color: transparent;
   background: var(--color-neutral-light);
   border-radius: 5px;
+  box-shadow: 0px 2px 4px #1e90ff;
 }
 
 .space {
@@ -129,6 +134,9 @@ button {
 .keyrow {
   display: flex;
   justify-content: center;
+}
+.key {
+  box-shadow: 0px 2px 4px #1e90ff;
 }
 
 .key:hover {
@@ -183,14 +191,6 @@ button {
   color: #FFF;
 }
 
-.start {
-  background: url(../images/letters.jpeg) no-repeat center / cover;
-}
-
-body {
-  background: url(../images/keyboard.jpg) no-repeat center / cover;
-}
-
 .start a {
   color: #fff;
 }
@@ -209,4 +209,10 @@ body {
 
 .lose a {
   color: var(--color-lose);
+}
+
+/* Gameboard */
+
+.start {
+  background: url(../images/letters.jpeg) no-repeat center / cover;
 }
