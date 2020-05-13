@@ -23,8 +23,4 @@ $(document).keyup((event) => {
 
     game.handleInteraction(button, letter);
   }
-  // const letter = event.key;
-  // const button = $(`button.key:contains(${letter})`);
-
-  // game.handleInteraction(button, letter);
 });
