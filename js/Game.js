@@ -41,7 +41,6 @@ class Game {
     this.activePhrase.addPhraseToDisplay();
 
     $("#overlay").hide();
-    // $("body").css("background", "url(./images/keyboard.jpeg) no-repeat center / cover");
   }
 
   /**
